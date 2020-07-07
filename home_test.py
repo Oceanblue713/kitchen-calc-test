@@ -29,12 +29,5 @@ short_reads_link = driver.find_element(*HomePage.short_reads_link)
 short_reads_link.click()
 time.sleep(2)
 
-# ozHeader = driver.find_element(*CalculatorPage.ozHeader)
-# print(ozHeader.text)
-# time.sleep(2)
-# ozInput = driver.find_element(*CalculatorPage.ozInput)
-# ozInput.send_keys("1")
-# time.sleep(2)
-
 driver.quit()
 print("Home Page Test is done")
