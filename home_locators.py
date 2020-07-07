@@ -15,3 +15,9 @@ class CalculatorPage():
     ozHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) h3")
     ozInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) [type]")
 
+class ShortReadsPage():
+    article1 = (By.LINK_TEXT, "Calorie Control")
+    article2 = (By.PARTIAL_LINK_TEXT, "Tool")
+    article3 = (By.PARTIAL_LINK_TEXT, "Seasoning")
+    header = (By.CSS_SELECTOR, "h3")
+
