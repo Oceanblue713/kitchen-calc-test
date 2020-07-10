@@ -14,6 +14,14 @@ class Buttons():
 class CalculatorPage():
     ozHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) h3")
     ozInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) [type]")
+    IbHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(4) h3")
+    IbInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(4) [type]")
+    TbHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(5) h3")
+    TbInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(5) [type]")
+    CHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(6) h3")
+    CInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(6) [type]")
+    InHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(7) h3")
+    InInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(7) [type]")
 
 class ShortReadsPage():
     article1 = (By.LINK_TEXT, "Calorie Control")
