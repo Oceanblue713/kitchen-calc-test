@@ -1,5 +1,5 @@
 from selenium import webdriver
-from home_locators import HomePage ,CalculatorPage, Buttons
+from home_locators import *
 import time
 
 driver = webdriver.Chrome('./chromedriver')

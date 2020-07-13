@@ -33,3 +33,9 @@ class ShortReadsPage():
     article3 = (By.PARTIAL_LINK_TEXT, "Seasoning")
     header = (By.CSS_SELECTOR, "h3")
 
+class WatchPage():
+    start_button = (By.CSS_SELECTOR, "#start-button")
+    stop_button = (By.CSS_SELECTOR, "#stop-button")
+    reset_button = (By.CSS_SELECTOR, "#reset-button")
+
+
