@@ -1,5 +1,5 @@
 from selenium import webdriver
-from home_locators import HomePage ,CalculatorPage
+from home_locators import HomePage ,CalculatorPage, Buttons
 import time
 
 driver = webdriver.Chrome('./chromedriver')
@@ -43,6 +43,24 @@ time.sleep(2)
 InInput = driver.find_element(*CalculatorPage.InInput)
 InInput.send_keys(1)
 time.sleep(1)
+
+feetHeader = driver.find_element(*CalculatorPage.feetHeader)
+print(feetHeader.text)
+time.sleep(2)
+feetInput = driver.find_element(*CalculatorPage.feetInput)
+feetInput.send_keys(1)
+time.sleep(1)
+
+mileHeader = driver.find_element(*CalculatorPage.mileHeader)
+print(mileHeader.text)
+time.sleep(2)
+mileInput = driver.find_element(*CalculatorPage.mileInput)
+mileInput.send_keys(1)
+time.sleep(1)
+
+home_button = driver.find_element(*Buttons.home_button)
+home_button.click()
+time.sleep(2)
 
 print("Calculator test is done.")
 driver.quit()
