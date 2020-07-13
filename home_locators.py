@@ -22,6 +22,10 @@ class CalculatorPage():
     CInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(6) [type]")
     InHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(7) h3")
     InInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(7) [type]")
+    feetHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(8) h3")
+    feetInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(8) [type]")
+    mileHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(9) h3")
+    mileInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(9) [type]")
 
 class ShortReadsPage():
     article1 = (By.LINK_TEXT, "Calorie Control")
