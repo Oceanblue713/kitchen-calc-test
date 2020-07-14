@@ -11,6 +11,10 @@ class Buttons():
     home_button = (By.LINK_TEXT, "Home")
     reads_button = (By.LINK_TEXT, "Reads")
 
+class AboutPage():
+    about_this_page = (By.CSS_SELECTOR, ".About .about-page:nth-of-type(1) h2")
+    about_the_creator = (By.CSS_SELECTOR, ".About .about-page:nth-of-type(2) h2")
+
 class CalculatorPage():
     ozHeader = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) h3")
     ozInput = (By.CSS_SELECTOR, ".flexbox-container .box:nth-of-type(3) [type]")
