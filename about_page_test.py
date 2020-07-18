@@ -3,6 +3,7 @@ from home_locators import *
 import time
 import unittest
 
+
 class AboutPageTestCase(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome('./chromedriver')

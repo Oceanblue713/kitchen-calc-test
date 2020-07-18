@@ -1,31 +1,40 @@
 from selenium import webdriver
 from home_locators import *
 import time
+import unittest
 
-driver = webdriver.Chrome('./chromedriver')
-driver.set_window_size(414, 736)
-driver.get("https://www.yourkitchenapp.com/")
-watch_link = driver.find_element(*HomePage.watch_link)
-watch_link.click()
-time.sleep(2)
 
-start_button = driver.find_element(*WatchPage.start_button)
-start_button.click()
-print("Start watch")
-time.sleep(5)
-stop_button = driver.find_element(*WatchPage.stop_button)
-stop_button.click()
-print("Stop watch")
-time.sleep(2)
-reset_button = driver.find_element(*WatchPage.reset_button)
-reset_button.click()
-print("Reset watch")
-time.sleep(2)
+class watchTestCase(unittest.TestCase):
+    def setUp(self):
+        self.browser = webdriver.Chrome('./chromedriver')
+        self.browser.set_window_size(414, 736)
+        self.addCleanup(self.browser.quit)
 
-home_button = driver.find_element(*Buttons.home_button)
-home_button.click()
-time.sleep(1)
+    def test_watch(self):
+        self.browser.get('https://www.yourkitchenapp.com/')
+        self.watch_link = self.browser.find_element(*HomePage.watch_link)
+        self.watch_link.click()
+        time.sleep(2)
 
-print("Watch test is done")
-driver.quit()
+        self.start_button = self.browser.find_element(*WatchPage.start_button)
+        self.start_button.click()
+        print("Start watch")
+        time.sleep(5)
+        self.stop_button = self.browser.find_element(*WatchPage.stop_button)
+        self.stop_button.click()
+        print("Stop watch")
+        time.sleep(2)
+        self.reset_button = self.browser.find_element(*WatchPage.reset_button)
+        self.reset_button.click()
+        print("Reset watch")
+        time.sleep(2)
 
+        self.home_button = self.browser.find_element(*Buttons.home_button)
+        self.home_button.click()
+        time.sleep(1)
+
+        print("Watch test is done")
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=1)
