@@ -4,7 +4,7 @@ import time
 import unittest
 
 
-class watchTestCase(unittest.TestCase):
+class WatchTestCase(unittest.TestCase):
     def setUp(self):
         self.browser = webdriver.Chrome('./chromedriver')
         self.browser.set_window_size(414, 736)
@@ -12,6 +12,7 @@ class watchTestCase(unittest.TestCase):
 
     def test_watch(self):
         self.browser.get('https://www.yourkitchenapp.com/')
+        time.sleep(1)
         self.watch_link = self.browser.find_element(*HomePage.watch_link)
         self.watch_link.click()
         time.sleep(2)
