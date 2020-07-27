@@ -51,27 +51,26 @@ class CalculatorTestCase(unittest.TestCase):
         self.IbInput.send_keys(1)
         time.sleep(2)
 
+        self.feetHeader = self.driver.find_element(*CalculatorPage.feetHeader)
+        print(self.feetHeader.text)
+        time.sleep(2)
+        self.feetInput = self.driver.find_element(*CalculatorPage.feetInput)
+        self.feetInput.send_keys(1)
+        time.sleep(1)
 
-# feetHeader = driver.find_element(*CalculatorPage.feetHeader)
-# print(feetHeader.text)
-# time.sleep(2)
-# feetInput = driver.find_element(*CalculatorPage.feetInput)
-# feetInput.send_keys(1)
-# time.sleep(1)
-#
-# mileHeader = driver.find_element(*CalculatorPage.mileHeader)
-# print(mileHeader.text)
-# time.sleep(2)
-# mileInput = driver.find_element(*CalculatorPage.mileInput)
-# mileInput.send_keys(1)
-# time.sleep(1)
-#
-# home_button = driver.find_element(*Buttons.home_button)
-# home_button.click()
-# time.sleep(2)
-#
-# print("Calculator test is done.")
-# driver.quit()
+        self.mileHeader = self.driver.find_element(*CalculatorPage.mileHeader)
+        print(self.mileHeader.text)
+        time.sleep(2)
+        self.mileInput = self.driver.find_element(*CalculatorPage.mileInput)
+        self.mileInput.send_keys(1)
+        time.sleep(1)
+
+        self.home_button = self.driver.find_element(*Buttons.home_button)
+        self.home_button.click()
+        time.sleep(2)
+
+        print("Calculator test is done.")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)
